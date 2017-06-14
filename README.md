@@ -3,3 +3,5 @@
 Summer Academy Monday Basics A
 
 Stores material for the Python and git courses.
+
+# Git
