@@ -29,12 +29,27 @@
         <p>There is little time during the workshop to deal with installation problems, so it makes the day run much more smoothly if you arrive with your software already installed.</p>
         <p><strong>Please make sure you run the verification script that can be found at the bottom of this page!</strong></p>
         <h3 id="help">Help!</h3>
-        <p> Take a look at the <a href="https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a> for help with any installation problems. If you are still having trouble please <a href="mailto:jdg1g14@soton.ac.uk?Subject=Summer_Academy_Help"> contact us</a>.</p>
+        <p>Take a look at the <a href="https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a> for help with any installation problems. If you are still having trouble please <a href="mailto:jdg1g14@soton.ac.uk?Subject=Summer_Academy_Help"> contact us</a>.</p>
 
         <h3 id="text-editor">Text Editor</h2>
         <p>A text editor is the piece of software you use to view and write code. If you have a preferred text editor, please use it. If you don't have one, we recommend the following.</p>
         <h4 id="windows-1">Windows</h4>
+
+        <p>There are two possibilites for a text editor in windows, it is highly recomended that you choose the first since this will more closely align with the experience on Mac OS X and Linux.</p>
+        <h5>1) Nano</h5>
+        <p><a href="http://www.nano-editor.org/dist/v2.2/NT/nano-2.2.6.zip">Nano</a>. This link will download a zip file containing the Nano executable file. Make sure you know where the download location is, usually this is your Downloads folder, if not the following commands may need changing. Please ask for some help!</p>
+        <p>Open up Git for windows (see below) and enter the following commands (each line should be followed by hitting return);</p>
+        <pre class="code"><code>unzip Downloads/nano-2.2.6.zip
+echo “alias nano=~/Downloads/nano.exe” >> .bash_profile
+source .bash_profile
+git config --global core.editor "~/Downloads/nano.exe -w"</code></pre>
+        <h5>2) Notepad++</h5>
         <p><a href="https://notepad-plus-plus.org/download/v6.8.7.html">Notepad++</a>. Just download the installer and run it.</p>
+        <p>After the installer has finished open up Git for windows (see below) and enter the following commands (each line should be followed by hitting return);</p>
+
+        <pre class="code"><code>echo "alias npp='/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe -multiInst -notabbar -nosession -noPlugin'" >> .bash_profile
+source .bash_profile
+git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"</code></pre>
         <h4 id="mac-os-x-and-linux">Mac OS X and Linux</h4>
         <p>Nano is a text editor that is installed by default on Mac OS X and Linux.</p>
         You can verify you have nano installed by opening a terminal and entering:
